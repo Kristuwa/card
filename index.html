@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Карточка</title>
-	 <link rel="preconnect" href="https://fonts.googleapis.com">
-	 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
       integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    >
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -23,6 +26,43 @@
         <div class="card">
           <div class="card__progress">
             <span class="card__progress-text">0/7</span>
+            <svg class="progress-ring" width="60" height="60">
+              <circle
+                class="progress-ring__circle"
+                stroke="#FFFFFF80"
+                stroke-width="1"
+                fill="transparent"
+                r="28"
+                cx="30"
+                cy="30"
+              />
+              <circle
+                class="progress-ring__circle--initial"
+                stroke="#FFFFFF"
+                stroke-width="2"
+                fill="transparent"
+                r="28"
+                cx="30"
+                cy="30"
+                stroke-dasharray="175.93"
+                stroke-dashoffset="170.93"
+              />
+              <circle
+                class="progress-ring__circle--fill"
+                stroke="#FFFFFF"
+                stroke-width="2"
+                fill="transparent"
+                r="28"
+                cx="30"
+                cy="30"
+                style="
+                  stroke-dasharray: 175.93;
+                  stroke-dashoffset: calc(
+                    175.93 * (1 - var(--progress-percentage) / 100)
+                  );
+                "
+              />
+            </svg>
           </div>
           <div class="card__content">
             <p class="card__label">Чеклист</p>

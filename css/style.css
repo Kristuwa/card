@@ -6,6 +6,7 @@
   --section-bg: #3579f5;
   --time: 250ms;
   --function-animation: cubic-bezier(0.4, 0, 0.2, 1);
+  --progress-percentage: 15; /* значение от 0 до 100 */
 }
 
 *,
@@ -89,9 +90,6 @@ img {
   position: relative;
   width: 60px;
   height: 60px;
-  border-radius: 50%;
-  border: 1px solid #ffffff80;
-  padding: 15px 14px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,6 +99,26 @@ img {
   font-weight: 400;
   line-height: 1.5;
   display: block;
+}
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+}
+.progress-ring__circle {
+  transition: stroke-dashoffset 0.3s;
+}
+.progress-ring__circle--initial {
+  transition: none;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+.progress-ring__circle--fill {
+  transition: stroke-dashoffset 0.3s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
 }
 .card__label {
   width: 76px;
