@@ -6,7 +6,7 @@
   --section-bg: #3579f5;
   --time: 250ms;
   --function-animation: cubic-bezier(0.4, 0, 0.2, 1);
-  --progress-percentage: 15; /* значение от 0 до 100 */
+  --progress-percentage: 0; /* значение от 0 до 100 */
 }
 
 *,
