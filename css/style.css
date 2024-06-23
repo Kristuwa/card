@@ -147,6 +147,7 @@ img {
   letter-spacing: 0.004em;
 }
 .card__btn {
+  cursor: pointer;
   width: 170px;
   height: 40px;
   border: none;
@@ -161,14 +162,13 @@ img {
   letter-spacing: -0.03em;
   background-color: var(--btn-bg);
   color: var(--secondary-text-col);
+  transform: scale(1);
 
-  transition: background-color var(--time) var(--function-animation),
-    color var(--time) var(--function-animation);
+  transition: transform var(--time) var(--function-animation);
 }
 .card__btn:hover,
 .card__btn:focus {
-  background-color: var(--accent-col);
-  color: var(--primary-text-col);
+  transform: scale(1.05);
 }
 @media screen and (min-width: 600px) {
   .card {
